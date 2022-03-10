@@ -4,7 +4,7 @@
 }
 .app{
   background-color:#FAFAFA;
-  height: 100vh;
+  /* height: 100vh; */ /* since container is growing, don't need this. */
 }
 
 .app__header{

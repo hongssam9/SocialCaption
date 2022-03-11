@@ -7,15 +7,49 @@
   /* height: 100vh; */ /* since container is growing, don't need this. */
 }
 
+.app__posts{
+  padding: 20px;
+  width: 35rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
 .app__header{
+  position: sticky;
+  top: 0;
+  z-index: 1;
   background-color: white;
   padding: 20px;
   border-bottom: 1px solid lightgray;
   object-fit: contain; /* regardless how big container gets, keep aspecet ration */
+  display: flex;
+  justify-content: space-between;
 }
 
 .app__headerImage{ 
+  object-fit: contain;
   height: 50px;
   width: auto;
   border-radius: 50%;
+}
+
+.app__signup{
+  display: flex; 
+  flex-direction: column;
+}
+
+.post__input{
+  flex: 1;
+  border: none;
+  padding: 10px;
+  border-top: 1px solid lightgray;
+}
+
+.post__button{
+  flex:0;
+  border:none;
+  border-top: 1px solid lightgray;
+  color: #6082a3;
+  background-color: transparent;
 }

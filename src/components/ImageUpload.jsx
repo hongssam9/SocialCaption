@@ -3,7 +3,7 @@ import Button from '@mui/material/Button';
 import { storage, db } from "../firebase"
 import firebase from 'firebase/compat/app';
 import './ImageUpload.css';
-const ImageUpload = ({username}) => {
+const ImageUpload = ({ username }) => {
     const [image, setImage] = useState(null);
     const [progress, setProgress] = useState(0);
     const [caption, setCaption] = useState('');
@@ -32,20 +32,20 @@ const ImageUpload = ({username}) => {
             () => {
                 /* Complete Function */
                 storage.ref('images')
-                .child(image.name)
-                .getDownloadURL()
-                .then(url => {
-                    /* post image inside db */
-                    db.collection('posts').add({
-                        timestamp: firebase.firestore.FieldValue.serverTimestamp(),
-                        caption: caption,
-                        imageUrl: url,
-                        username: username,
-                    });
-                    setProgress(0);
-                    setCaption("");
-                    setImage(null);
-                })
+                    .child(image.name)
+                    .getDownloadURL()
+                    .then(url => {
+                        /* post image inside db */
+                        db.collection('posts').add({
+                            timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+                            caption: caption,
+                            imageUrl: url,
+                            username: username,
+                        });
+                        setProgress(0);
+                        setCaption("");
+                        setImage(null);
+                    })
             }
         )
     }
@@ -61,8 +61,7 @@ const ImageUpload = ({username}) => {
             <progress className="imageupload__progress" value={progress} max="100" />
             <input type="text" placeholder='Enter a caption...' onChange={ev => setCaption(ev.target.value)} value={caption} />
             <input type="file" onChange={handleChange} />
-            <Button onClick={handleUpload}>
-                Upload</Button>
+            <div className="imageupload__button" onClick= {handleUpload}><strong>+</strong></div>
         </div>
     );
 };

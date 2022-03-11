@@ -1,12 +1,27 @@
 .imageupload{
     display:flex;
     flex-direction: column;
-    width: 60%;
-    margin: 10px auto 10px auto;   
-    /* background-color: white ;
-    border-top: 1px solid lightgray;  */
+    width: 100%;
+    margin: 10px auto 10px auto; 
+    position: sticky;
+    bottom: 0px; 
 }
 
 .imageupload__progress {
-    width: 100%;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+.imageupload__button{
+    background: #FF7A59;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 22px; 
 }

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import "./App.css";
 import { db, auth } from './firebase';
-import logo from "./components/img/blue_image.png";
+import logo from "./components/img/SoCap.png";
 import Post from "./components/Post.jsx";
 import Modal from '@mui/material/Modal';
 import Box from '@mui/material/Box';
@@ -9,7 +9,6 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Input from '@mui/material/Input'
 import ImageUpload from './components/ImageUpload.jsx'
-import InstagramEmbed from 'react-instagram-embed'
 
 const style = {
   position: 'absolute',
@@ -186,7 +185,7 @@ function App() {
       /> */}
 
      
-      
+
       {user?.displayName ? ( 
         <ImageUpload username={user.displayName} />
       ) : (

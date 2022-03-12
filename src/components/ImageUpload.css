@@ -1,10 +1,11 @@
 .imageupload{
     display:flex;
     flex-direction: column;
-    width: 100%;
-    margin: 10px auto 10px auto; 
+    margin: 0 auto 10px auto; 
     position: sticky;
-    bottom: 0px; 
+    bottom: 0;
+    background-color: rgb(233, 206, 180);
+    width: 100%;
 }
 
 .imageupload__progress {
@@ -14,7 +15,7 @@
 }
 
 .imageupload__button{
-    background: #FF7A59;
+    background: #c5c495;
     width: 30px;
     height: 30px;
     border-radius: 50%;
@@ -24,4 +25,20 @@
     margin-left: auto;
     margin-right: auto;
     font-size: 22px; 
+}
+.imageupload__button:hover {
+    cursor: pointer;
+    background-color: #ebebeb;
+}
+.imageupload__caption{
+    width: 49%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid lightgray; 
+}
+
+.imageupload__file{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
 }
